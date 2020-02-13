@@ -17,6 +17,16 @@ public class Road {
         cities = new ArrayList<>();
     }
 
+    private List<String> citiesName = new ArrayList<>();
+
+    private List<String> getCitiesName() {
+        for (City city : cities) {
+            citiesName.add(city.getName());
+        }
+
+        return citiesName;
+    }
+
     public List<City> getCities() {
         return cities;
     }
@@ -59,6 +69,7 @@ public class Road {
         return "Дорога: " +
                 "'" + name + '\'' +
                 ", Длина: " + length +
-                '}';
+                ", Города : " + getCitiesName() +
+                '\n';
     }
 }
