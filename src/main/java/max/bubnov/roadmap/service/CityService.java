@@ -3,6 +3,7 @@ package max.bubnov.roadmap.service;
 import max.bubnov.roadmap.domain.City;
 import max.bubnov.roadmap.domain.Road;
 import max.bubnov.roadmap.repo.CityRepo;
+import max.bubnov.roadmap.utils.LengthUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +43,26 @@ public class CityService implements CityRepo{
 
     public List<Road> getRoadsByCityName(String name) {
         return findByName(name).getRoads();
+    }
+
+    public boolean addRoad(City first, City second, Road road) {
+        if(first != null && second != null && road != null) {
+            if (road.getCities().size() > 2) {
+                System.out.println("Дорога уже имеет два города!");
+                return false;
+            } else if(road.getLength() >= LengthUtil.getPermissibleLength(first, second)) {
+                first.getRoads().add(road);
+                second.getRoads().add(road);
+                road.getCities().add(first);
+                road.getCities().add(second);
+                return true;
+            } else {
+                System.out.println("Дорога слишком коротая");
+                return false;
+            }
+        } else {
+            System.out.println("Incorrect data");
+            return false;
+        }
     }
 }

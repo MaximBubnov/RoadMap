@@ -56,9 +56,9 @@ public class Road {
 
     @Override
     public String toString() {
-        return "Road{" +
-                "name='" + name + '\'' +
-                ", length=" + length +
+        return "Дорога: " +
+                "'" + name + '\'' +
+                ", Длина: " + length +
                 '}';
     }
 }

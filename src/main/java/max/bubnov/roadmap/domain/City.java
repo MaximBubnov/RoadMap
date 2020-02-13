@@ -67,11 +67,11 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
-                "name='" + name + '\'' +
+        return "Город: " +
+                "'" + name + '\'' +
                 ", x=" + x +
                 ", y=" + y +
-                ", roads=" + roads +
+                ", Список дорог : " + roads +
                 '}';
     }
 }
