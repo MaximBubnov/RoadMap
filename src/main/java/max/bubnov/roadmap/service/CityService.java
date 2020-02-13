@@ -37,10 +37,6 @@ public class CityService implements CityRepo{
     }
 
     @Override
-    public void deleteCity(City city) {
-        cities.remove(cities.indexOf(city));
-    }
-
     public List<Road> getRoadsByCityName(String name) {
         return findByName(name).getRoads();
     }

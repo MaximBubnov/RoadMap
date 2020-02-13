@@ -23,7 +23,6 @@ public class Road {
         for (City city : cities) {
             citiesName.add(city.getName());
         }
-
         return citiesName;
     }
 

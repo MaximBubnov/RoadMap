@@ -10,8 +10,8 @@ public interface RoadRepo {
 
     Road findByName(String name);
 
+    //API # 2
     boolean createRoad(Road road);
-
-
+    //API # 3
     void delete(Road road);
 }
