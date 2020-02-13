@@ -63,6 +63,7 @@ public class ApplicationStarter {
                 cities = controller.getAllCities();
                 System.out.println("Список Городов:");
                 System.out.println(cities);
+                System.out.println("Выберите следующий номер API");
 
             } else if (count == 2) {
                 //Добавление новой дороги
@@ -85,6 +86,7 @@ public class ApplicationStarter {
                 roads = controller.getAllRoads();
                 System.out.println("Список Дорог:");
                 System.out.println(roads);
+                System.out.println("Выберите следующий номер API");
             } else if(count == 3) {
                 //Соедениние двух городов дорогой
                 while (true) {
@@ -110,6 +112,7 @@ public class ApplicationStarter {
 
                         System.out.println("Если желаете закончить ввод - введите в консоль \\q");
                     }
+                    System.out.println("Выберите следующий номер API");
                 }
             } else if (count == 4) {
                 //Получение города по имени
@@ -123,6 +126,7 @@ public class ApplicationStarter {
                         System.out.println(controller.getCityByName(city));
                     }
                 }
+                System.out.println("Выберите следующий номер API");
             } else if (count == 5) {
                 //Получение списка дорог по имени города
                 while (true) {
@@ -135,6 +139,7 @@ public class ApplicationStarter {
                         System.out.println(controller.getRoadsByCityName(town));
                     }
                 }
+                System.out.println("Выберите следующий номер API");
             } else if(count == 6) {
 
                 //Удаление дороги
@@ -148,6 +153,7 @@ public class ApplicationStarter {
                         controller.deleteRoad(controller.getRoadByName(roadDel));
                     }
                 }
+                System.out.println("Выберите следующий номер API");
 
             } else if(count == 0) {
                 //Выход из программы
@@ -166,6 +172,7 @@ public class ApplicationStarter {
                         System.out.println(controller.getAllRoads());
                     }
                 }
+                System.out.println("Выберите следующий номер API");
             }
         }
     }
