@@ -43,7 +43,7 @@ public class CityService implements CityRepo{
 
     public boolean addRoad(City first, City second, Road road) {
         if(first != null && second != null && road != null) {
-            if (road.getCities().size() > 2) {
+            if (road.getCities().size() > 1) {
                 System.out.println("Дорога уже имеет два города!");
                 return false;
             } else if(road.getLength() >= LengthUtil.getPermissibleLength(first, second)) {

@@ -17,9 +17,9 @@ public class Road {
         cities = new ArrayList<>();
     }
 
-    private List<String> citiesName = new ArrayList<>();
-
     private List<String> getCitiesName() {
+        List<String> citiesName = new ArrayList<>();
+
         for (City city : cities) {
             citiesName.add(city.getName());
         }

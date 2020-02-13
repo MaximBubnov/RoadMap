@@ -45,7 +45,6 @@ public class MainController {
     }
 
     public boolean deleteRoad(Road road) {
-        if(road != null) {
             roadService.delete(road);
             List<City> allCity = cityService.findAll();
             for (City city : allCity) {
@@ -59,7 +58,6 @@ public class MainController {
                     }
                 }
             }
-        }
         return false;
     }
 }

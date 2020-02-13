@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ApplicationStarter {
     public static void main(String[] args) throws IOException {
@@ -144,12 +145,7 @@ public class ApplicationStarter {
                     if(roadDel.equals("\\q")) {
                         break;
                     } else {
-
-                        if(!controller.deleteRoad(controller.getRoadByName(roadDel))) {
-                            System.out.println("Дорога успешно удалена. Для проверки воспользуйтесь API № 7 ");
-                        } else {
-                            System.out.println("Дорога не найдена");
-                        }
+                        controller.deleteRoad(controller.getRoadByName(roadDel));
                     }
                 }
 

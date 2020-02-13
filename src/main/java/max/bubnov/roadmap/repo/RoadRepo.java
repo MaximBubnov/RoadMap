@@ -13,5 +13,5 @@ public interface RoadRepo {
     //API # 2
     boolean createRoad(Road road);
     //API # 3
-    void delete(Road road);
+    boolean delete(Road road);
 }

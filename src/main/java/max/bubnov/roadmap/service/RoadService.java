@@ -35,11 +35,13 @@ public class RoadService implements RoadRepo {
     }
 
     @Override
-    public void delete(Road road) {
-        if(road != null && findByName(road.getName()) != null) {
-            roads.remove(findByName(road.getName()));
+    public boolean delete(Road road) {
+        if(road != null && findAll().contains(road)) {
+            System.out.println("Дорога успешно удалена. Для проверки API 7");
+            return roads.remove(findByName(road.getName()));
         } else {
             System.out.println("Такой дороги не найдено!");
         }
+        return false;
     }
 }
