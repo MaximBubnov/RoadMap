@@ -52,7 +52,6 @@ public class MainController {
                 for (Road road1 : roads) {
                     if (road1.equals(road)) {
                         roads.remove(road1);
-                        return true;
                     } else {
                         return false;
                     }

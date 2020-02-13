@@ -3,6 +3,7 @@ package max.bubnov.roadmap.domain;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class City {
 
@@ -16,7 +17,7 @@ public class City {
         this.name = name;
         this.x = x;
         this.y = y;
-        roads = new ArrayList<>();
+        roads = new CopyOnWriteArrayList<>();
     }
 
     public List<Road> getRoads() {
